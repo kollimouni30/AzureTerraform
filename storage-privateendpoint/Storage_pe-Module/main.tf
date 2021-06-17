@@ -59,10 +59,10 @@ resource "azurerm_private_endpoint" "pe_blob" {
     private_connection_resource_id = azurerm_storage_account.main[each.value["storage_entity_map"]].id
     subresource_names              = each.value["subresource_names"]
   }
-  /*
+  
   private_dns_zone_group {
     name                 = var.private_dns_zone.name
     private_dns_zone_ids = [var.private_dns_zone.id]
   }
-  */
+  
 }
